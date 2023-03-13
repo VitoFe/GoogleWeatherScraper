@@ -26,3 +26,7 @@ The script outputs the following weather data:
 - `python weather.py New York`
 
 This command will get the weather data for New York.
+
+### Demo
+
+You can run the Demo Flask app by running `python app.py` in the terminal, then navigate to http://localhost:5000 in your browser to see the demo form.

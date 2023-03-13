@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>{{ data['region'] }} | {{ data['dayhour'].upper() }}</h1>
+    <h2>Weather: {{ data['weather_now'] }}</h2>
+    <p>Temperature: {{ data['temp_now'] }}°C</p>
+    <p>Precipitation: {{ data['precipitation'] }}</p>
+    <p>Humidity: {{ data['humidity'] }}</p>
+    <p>Wind: {{ data['wind'] }}</p>
+    <h2>Next Days:</h2>
+    <ul>
+        {% for dayweather in data['next_days'] %}
+        <li>
+            {{ dayweather['name'].upper() }}: {{ dayweather['weather'] }}
+            [{{ dayweather['min_temp'] }}°C | {{ dayweather['max_temp'] }}°C]
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
